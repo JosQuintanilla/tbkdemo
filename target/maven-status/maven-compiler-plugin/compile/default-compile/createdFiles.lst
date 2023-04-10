@@ -1,0 +1,3 @@
+cl\ejemplo\tbkdemo\ServletInitializer.class
+cl\ejemplo\tbkdemo\TbkdemoApplication.class
+cl\ejemplo\tbkdemo\controller\HealthCheck.class
