@@ -17,13 +17,15 @@ public class UsuarioServiceImpl implements UsuarioService{
 private final static Logger logger = Logger.getLogger(UsuarioServiceImpl.class);
 	
 	@Autowired
-	private UsuarioRepositoryJPA usuarioRepositoryJPA;
+	private UsuarioRepositoryJPA usuarioRepository;
 	
 	@Override
 	public Usuario agregar(Usuario usuario) {
 		logger.info("UsuarioServiceImpl - agregar - init");
 		
-		return null;
+		usuarioRepository.save(usuario);
+		
+		return usuario;
 	}
 
 	@Override
@@ -37,7 +39,7 @@ private final static Logger logger = Logger.getLogger(UsuarioServiceImpl.class);
 		logger.info("UsuarioServiceImpl - listarUsuarios - init");
 		List<Usuario> listaUsuarios = new ArrayList<>();
 		try {
-			listaUsuarios = usuarioRepositoryJPA.listarUsuario();
+			listaUsuarios = usuarioRepository.listarUsuario();
 			
 			for (Iterator iterator = listaUsuarios.iterator(); iterator.hasNext();) {
 				Usuario usuario2 = (Usuario) iterator.next();
