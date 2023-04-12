@@ -6,21 +6,28 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import cl.ejemplo.tbkdemo.model.ResponseJSON;
+
 @RestController
-@RequestMapping("/api")
+@RequestMapping("/apitbk")
 public class HealthCheck {
 	
 	private final static Logger logger = Logger.getLogger(HealthCheck.class);
+	
+	private final ResponseJSON resJSON = new ResponseJSON();
 	
 	@Value("${build.version}")
 	private String version;
 	
 	
 	@GetMapping("/version")
-	public String healcheck() {	
+	public ResponseJSON healcheck() {	
 		
 		logger.info("version: "+version);
-		return version;
+		resJSON.setStatus(200);
+		resJSON.setDescripcion("OK");
+		resJSON.setPayload(version);
+		return resJSON;
 	}
 
 }
