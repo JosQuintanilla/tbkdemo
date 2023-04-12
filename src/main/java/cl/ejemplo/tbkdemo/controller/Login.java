@@ -12,7 +12,7 @@ import cl.ejemplo.tbkdemo.model.Usuario;
 import cl.ejemplo.tbkdemo.services.LoginService;
 
 @RestController
-@RequestMapping("/api")
+@RequestMapping("/apidemo")
 public class Login {
 
 	
@@ -21,7 +21,7 @@ public class Login {
 	@Autowired
 	private LoginService loginServices;
 	
-	@PostMapping("/login")
+	@PostMapping("/greeting2")
 	public Usuario usuario (@RequestBody LoginRequest loginRequest) {
 		
 		logger.info("login init");

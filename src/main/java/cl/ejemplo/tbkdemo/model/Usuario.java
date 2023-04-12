@@ -2,15 +2,39 @@ package cl.ejemplo.tbkdemo.model;
 
 import java.util.Date;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+import javax.persistence.Id;
+
+@Entity
+@Table(name = "usuario")
 public class Usuario {
 	
+	@Id
+	@Column(name = "id")
 	private String id;
+	
+	@Column(name = "usuario")
 	private String usuario;	
+	
+	@Column(name = "password")
 	private String password;
+	
+	@Column(name = "nombre")
 	private String nombre;
+	
+	@Column(name = "apellido")
 	private String apellido;
+	
+	@Column(name = "email")
 	private String email;
+	
+	@Column(name = "fechaNac")
 	private Date fechaNac;
+	
+	@Column(name = "fechaUltLog")
 	private Date fechaUltLog;
 	
 	public Usuario () {

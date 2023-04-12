@@ -44,6 +44,7 @@ speed-measure-plugin.json
 /.classpath
 .c9/
 *.launch
+/.target/
 .settings/
 *.sublime-workspace
 
