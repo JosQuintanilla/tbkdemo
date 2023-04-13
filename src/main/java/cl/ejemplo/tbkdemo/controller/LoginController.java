@@ -12,11 +12,11 @@ import cl.ejemplo.tbkdemo.model.Usuario;
 import cl.ejemplo.tbkdemo.services.LoginService;
 
 @RestController
-@RequestMapping("/api")
-public class Login {
+@RequestMapping("/apitbk")
+public class LoginController {
 
 	
-	private final static Logger logger = Logger.getLogger(Login.class);
+	private final static Logger logger = Logger.getLogger(LoginController.class);
 	
 	@Autowired
 	private LoginService loginServices;

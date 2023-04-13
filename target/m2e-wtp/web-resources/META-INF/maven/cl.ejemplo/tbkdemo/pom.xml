@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>cl.ejemplo</groupId>
 	<artifactId>tbkdemo</artifactId>
-	<version>0.0.7</version>
+	<version>0.0.9</version>
 	<packaging>war</packaging>
 	<name>tbkdemo</name>
 	<description>Demo project for Spring Boot</description>
@@ -38,6 +38,18 @@
 			<groupId>log4j</groupId>
 			<artifactId>log4j</artifactId>
 			<version>1.2.17</version>
+		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<scope>runtime</scope>
+		</dependency> 
+		
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
 		</dependency>
 
 		
